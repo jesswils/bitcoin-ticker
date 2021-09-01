@@ -42,7 +42,13 @@ class _PriceScreenState extends State<PriceScreen> {
             alignment: Alignment.center,
             padding: EdgeInsets.only(bottom: 30.0),
             color: Colors.lightBlue,
-            child: null,
+            child: DropdownButton<String>(value: 'GBP', items:[
+              DropdownMenuItem(child: Text('GBP'),value:'GBP',),
+              DropdownMenuItem(child: Text('EUR'),value:'EUR',),
+              DropdownMenuItem(child: Text('JPY'),value:'JPY',),
+            ], onChanged: (value) {
+              print(value);
+            }),
           ),
         ],
       ),
